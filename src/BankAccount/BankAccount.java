@@ -18,10 +18,11 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) throws BalanceException {
-        balance -= amount;
-        if(balance < 0) {
+         if (balance < amount)
+         {
             throw new BalanceException();
-        }
+         }
+            balance -= amount;
     }
 
     public void printAccountInfo() {
